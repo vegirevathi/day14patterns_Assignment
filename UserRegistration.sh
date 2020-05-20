@@ -36,10 +36,16 @@ else
 	echo "mobile number is invalid"
 echo "enter password"
 read password
-passwordPat=[a-zA-Z/0-9]{8}
+passwordPat=[a-zA-Z0-9.,/*-+@#%^]{8}
 if [[ $password =~ $passwordPat ]]
 then
 	echo "Password is valid"
 else
 	echo "Password is invalid"
+
+if [[ $passwordPat =~ [a-z] ]]
+then
+	echo "Rule1 is passed"
+else
+	echo "rule1 is failed"
 fi
