@@ -6,7 +6,16 @@ read FirstName
 FirstNamePat="^[A-Z]{1,}[a-z]*"
 if [[ $FirstName =~ $FirstNamePat ]];
 then
-	echo "Valid";
+	echo "First name is Valid";
 else
-	echo "Invalid";
+	echo "first name is Invalid";
+fi
+echo "Enter Last Name"
+read LastName
+LastNamePat="^[A-Z]{1}[a-z]*"
+if [[ $LastName =~ $LastNamePat ]]
+then
+	echo "last name is valid"
+else
+	echo "last name is invalid"
 fi
