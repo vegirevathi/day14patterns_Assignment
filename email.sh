@@ -3,10 +3,8 @@ shopt -s extglob
 
 echo "Enter Email Address"
 read email
-emailPat="abc"
-emailPat_part2='[.-+]?[100|111]?'
-echo $emailPat_part2
-if [[ $email =~ $emailPat+$emailPat_part2 ]];
+emailPat_part5="[a-z]{2}$"
+if [[ $email =~ $emailPat_part5 ]];
 then
 	echo "valid";
 else
