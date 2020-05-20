@@ -58,3 +58,11 @@ else
 	echo "Rule 2 is failed"
 fi
 
+echo "Checking for special character"
+read password
+if [[ $password =~ [.,@#%^*+-] ]]
+then
+	echo "Rule 3 is passed"
+else
+	echo "Rule 3 is failed"
+fi
